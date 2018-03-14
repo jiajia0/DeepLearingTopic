@@ -78,4 +78,7 @@ with tf.Session() as sess:
     print(sess.run(w1))
     print('w2:')
     print(sess.run(w2))
+    # 写入文件
+    writer = tf.summary.FileWriter('logs/', sess.graph)
+    writer.close()
 
